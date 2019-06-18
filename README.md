@@ -13,13 +13,13 @@ Project Name:Student Information System
 
 Group Members:
 
-Name1: IT17026826:Kolamunna K.G.T.D
+    Name1: IT17026826:Kolamunna K.G.T.D
 
-Name2: IT17027298:Fernando N.I.R 
+    Name2: IT17027298:Fernando N.I.R 
 
-Name3: IT17145930:Nilfa M.S.F 
+    Name3: IT17145930:Nilfa M.S.F 
 
-Name4: IT17129404:N.J.Pathiranage
+    Name4: IT17129404:N.J.Pathiranage
 
 
 Deployment:
