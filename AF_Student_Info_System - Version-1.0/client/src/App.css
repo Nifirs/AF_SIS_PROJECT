@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+.app-body {
+  background-color: #48494f;
+  min-height: 200vh;
+}
+
+/* .App-logo1 {
+  animation: App-logo-spin1 infinite 10s linear;
+  height: 20vmin;
+  pointer-events: none;
+  margin-top: 20px;
+} */
+
+.App-logo {
+  height: 20px;
+  margin-top: 20px;
+}
+
+.App-header {
+  background-color: black;
+
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.inner-link {
+  background-color: #997acb;
+}
+
+.alink {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.btn-reg {
+  margin-left: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  border-color: deepskyblue;
+
+  background: black;
+  width: 110px;
+  height: 40px;
+  color: white;
+}
+.reservation {
+  margin-left: 0px;
+  background-color: #8736cd;
+  width: 500px;
+  height: 800px;
+}
+.logoMain {
+  height: 50px;
+  width: 50px;
+}
+.transition {
+  width: 1000px;
+  height: 500px;
+  background: url(./images/happy.jpg);
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  100% {
+    background: url(./images/happy.jpg);
+  }
+
+  50% {
+    background: url(./images/c3.jpg);
+  }
+
+  75% {
+    background: url(./images/h2.jpg);
+  }
+
+  100% {
+    background: url(./images/happy1.jpg);
+  }
+}
+
+.btn-group {
+  background-color: #8736cd;
+  width: 150px;
+}
+
+.nextEach {
+  display: flex;
+  flex-direction: row;
+}
