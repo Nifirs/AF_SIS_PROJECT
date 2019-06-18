@@ -39,9 +39,11 @@ npm install
 
 5.Now open a new Terminal and go to the project folder and type
 
-node server.js
+    1.npm install
 
-6.Then the Express server and Mongo DB server will be started
+    11.node server.js
+
+6.All the dependencies in the project folder, pakage.json will be downloaded and the Express server, Mongo DB server will be started
 
 7.Now go to the previously open Terminal (in the client folder)and type
 
