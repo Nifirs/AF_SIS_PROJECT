@@ -1,8 +1,10 @@
 # AF_SIS_PROJECT
 Application Frameworks : Group Project-Tech_Gang
 
-REACT JS : FrontEnd
-Node JS,Express JS : BackEnd Server
+FrontEnd:REACT JS  
+
+BackEnd Server:Node JS,Express JS  
+
 Database : Mongo DB
 
 Group Name:Tech_Gang
