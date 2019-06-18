@@ -29,11 +29,11 @@ Deployment:
 
 2.Open the Terminal and go to the project folder and type
 
-cd client
+    cd client
 
 3.Then type
 
-npm install
+    npm install
 
 4.All the dependencies in the client folder, pakage.json will be downloaded
 
@@ -47,7 +47,7 @@ npm install
 
 7.Now go to the previously open Terminal (in the client folder)and type
 
-npm start
+    npm start
 
 8.Then the Student Information System Application will be deployed in the http://localhost:3000/
 
