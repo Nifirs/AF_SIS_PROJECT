@@ -26,17 +26,29 @@ Deployment:
 
 
 1.Download the Project folder
+
 2.Open the Terminal and go to the project folder and type
+
 cd client
+
 3.Then type
+
 npm install
+
 4.All the dependencies in the client folder, pakage.json will be downloaded
+
 5.Now open a new Terminal and go to the project folder and type
+
 node server.js
+
 6.Then the Express server and Mongo DB server will be started
+
 7.Now go to the previously open Terminal (in the client folder)and type
+
 npm start
+
 8.Then the Student Information System Application will be deployed in the http://localhost:3000/
+
 
 
 
