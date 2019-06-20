@@ -23,11 +23,11 @@ import InstructorLogin from "./components/InstructorLogin";
 import StudentRegister from "./components/StudentRegister";
 import InstructorRegister from "./components/InstructorRegister";
 import AdminRegister from "./components/AdminRegister";
-import ViewCourse from "./Component/viewNote";
-import EditCourse from "./Component/editNote";
-import AddCourse from "./Component/addNote";
-import DeleteCourse from "./Component/deleteNote";
-import viewStudent from "./Component/viewStudent";
+import ViewCourse from "./components/viewNote";
+import EditCourse from "./components/editNote";
+import AddCourse from "./components/addNote";
+import DeleteCourse from "./components/deleteNote";
+import viewStudent from "./components/viewStudent";
 
 
 class App extends Component {
@@ -74,12 +74,12 @@ class App extends Component {
          
             <Route exact path="/studentprofile" component={StudentProfile} />
       
-              <Link to="/">Notices</Link>
+              <Link to="/views">Notices</Link>
               <Link to="/create">Add Notices</Link>
               <Link to="/view">View Student</Link>
 
     
-              <Route path="/" exact component={ViewCourse}/>
+              <Route path="/views" exact component={ViewCourse}/>
               <Route path="/edit/:id" component={EditCourse}/>
               <Route path="/create" component={AddCourse}/>
               <Route path="/delete/:id" component={DeleteCourse}/>
