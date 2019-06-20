@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { login } from "./UserFunctions";
 import { Link } from "react-router-dom";
+import logo2 from "../images/lock.png";
+
+
 //new
 import "./App.css";
 
@@ -106,20 +109,26 @@ class Login extends Component {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to={"/login"} className="nav-link">
-                Admin-Login
+              <img src={logo2} className="logoMain" alt="logo" />
+
+                Admin-Login&nbsp;&nbsp;&nbsp;&nbsp;
               </Link>
             </li>
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to={"/studentlogin"} className="nav-link">
-                &nbsp;&nbsp;&nbsp;&nbsp;Student-Login
+              <img src={logo2} className="logoMain" alt="logo" />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;Student-Login&nbsp;&nbsp;&nbsp;&nbsp;
               </Link>
             </li>
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to={"/instructorlogin"} className="nav-link">
+              <img src={logo2} className="logoMain" alt="logo" />
+
                 &nbsp;&nbsp;&nbsp;&nbsp;Instructor-Login
               </Link>
             </li>

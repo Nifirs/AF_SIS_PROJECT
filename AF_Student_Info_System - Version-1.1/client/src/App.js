@@ -3,18 +3,25 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import logo1 from "./images/ee.jpg";
 
-
 import "bootstrap/dist/css/bootstrap.css";
+
+import ListCoursesComponent from "../src/components/ListCoursesComponent";
+import CourseComponent from "../src/components/CourseComponent";
 
 import GeneralRContainer from "./components/GeneralRContainer";
 import AdminRContainer from "./components/AdminRContainer";
+import InstructorRContainer from "./components/InstructorRContainer";
+import StudentRContainer from "./components/StudentRContainer";
+
+import addCourse from "./Services/courseService/addCourse";
+import viewCourse from "./Services/courseService/viewCourse";
+import updateCourse from "./Services/courseService/updateCourse";
 
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 
 import Register from "./components/Register";
 import Profile from "./components/Profile";
-
 
 import StudentProfile from "./components/StudentProfile";
 import InstructorProfile from "./components/InstructorProfile";
@@ -36,25 +43,37 @@ class App extends Component {
             crossOrigin="anonymous"
           />
           <Navbar />
-          <img src={logo1} className="App-logo1" alt="logo" style={{width:"1300px",height:"300px"}} />
+          <img
+            src={logo1}
+            className="App-logo1"
+            alt="logo"
+            style={{ width: "1300px", height: "300px" }}
+          />
 
           <br />
           <h3 style={{ color: "white" }}>
             Welcome to TechGang CourseWeb
-            <br/>  
+            <br />
           </h3>
 
           <body className="app-body">
             <Route exact path="/" component={GeneralRContainer} />
-            
             <Route exact path="/userHome" component={AdminRContainer} />
-
-            
+            <Route
+              exact
+              path="/instructorHome"
+              component={InstructorRContainer}
+            />
+            <Route exact path="/studentHome" component={StudentRContainer} />
 
             <Route exact path="/adminregister" component={AdminRegister} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/studentregister" component={StudentRegister} />
-            <Route exact path="/instructorregister" component={InstructorRegister} />
+            <Route
+              exact
+              path="/instructorregister"
+              component={InstructorRegister}
+            />
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/studentlogin" component={StudentLogin} />
@@ -62,13 +81,20 @@ class App extends Component {
 
             <Route exact path="/profile" component={Profile} />
 
-          
-            <Route exact path="/instructorprofile" component={InstructorProfile}  />
-          
-         
+            <Route
+              exact
+              path="/instructorprofile"
+              component={InstructorProfile}
+            />
+
             <Route exact path="/studentprofile" component={StudentProfile} />
-          
-            
+
+            <Route exact path="/addCourse" component={addCourse} />
+            <Route exact path="/viewCourse" component={viewCourse} />
+            <Route exact path="/editCourse/:id" component={updateCourse} />
+
+            <Route path="/courses" exact component={ListCoursesComponent} />
+            <Route path="/courses/:id" component={CourseComponent} />
           </body>
         </div>
       </Router>

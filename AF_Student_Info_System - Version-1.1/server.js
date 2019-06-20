@@ -5,7 +5,6 @@ var app = express();
 var mongoose = require("mongoose");
 var port = process.env.PORT || 5000;
 
-
 app.use(bodyParser.json());
 app.use(cors());
 app.use(
@@ -23,19 +22,15 @@ mongoose
 
 //administrator route path=Users
 var Users = require("./routes/Users");
-var Instructors=require("./Routes/Instructors");
-var Students=require("./Routes/Students")
-
-
+var Instructors = require("./Routes/Instructors");
+var Students = require("./Routes/Students");
+var courseRoute = require("./Routes/courseRoute");//should import the route "file" name--->courseRoute not courseRoute1(this is exported module name)
 
 //Routing Files are imported
 app.use("/users", Users);
 app.use("/instructors", Instructors);
 app.use("/students", Students);
-
-
-
-
+app.use("/courses", courseRoute);
 
 //Common---> var app=express()
 app.listen(port, () => {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { login } from "./StudentFunctions";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import logo2 from "../images/lock.png";
 
 //new
 import "./App.css";
@@ -102,23 +103,32 @@ class StudentLogin extends Component {
         className="wrapper"
         style={{ backgroundColor: "#494B4B", height: "600px" }}
       >
-                        <nav className="navbar navbar-dark bg-dark navbar-collapse justify-content-md-center">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/login"} className="nav-link">Admin-Login</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/studentlogin"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Student-Login</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/instructorlogin"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Instructor-Login</Link>
-                                </li>
-                            </ul>
-                        </nav>
+        <nav className="navbar navbar-dark bg-dark navbar-collapse justify-content-md-center">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/login"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                Admin-Login&nbsp;&nbsp;&nbsp;&nbsp;
+              </Link>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/studentlogin"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                &nbsp;&nbsp;&nbsp;&nbsp;Student-Login&nbsp;&nbsp;&nbsp;&nbsp;
+              </Link>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/instructorlogin"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                &nbsp;&nbsp;&nbsp;&nbsp;Instructor-Login
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <div className="form-group" className="col-md-6 mt-5 mx-auto">
           <br />
           <form noValidate onSubmit={this.onSubmit} style={{ color: "white" }}>

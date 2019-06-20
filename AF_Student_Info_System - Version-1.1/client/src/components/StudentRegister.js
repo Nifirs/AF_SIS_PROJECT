@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { register } from "./StudentFunctions";
 import "./App.css";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class StudentRegister extends Component {
   constructor() {
@@ -41,27 +41,13 @@ class StudentRegister extends Component {
         className="wrapper"
         style={{ backgroundColor: "#96979B", height: "900px" }}
       >
-        <nav className="navbar navbar-dark bg-dark navbar-collapse justify-content-md-center">
-                            {/* <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/register"} className="nav-link">Admin-Register</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/studentregister"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Student-Register</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/instructorregister"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Instructor-Register</Link>
-                                </li>
-                            </ul> */}
-        </nav>
+        <nav className="navbar navbar-dark bg-dark navbar-collapse justify-content-md-center" />
         <div className="col-md-6 mt-5 mx-auto">
           <form noValidate onSubmit={this.onSubmit}>
-          <br/>
-            <h5 style={{ color: "white" }}>STUDENTS PLEASE SIGN UP TO THE PORTAL</h5>
+            <br />
+            <h5 style={{ color: "white" }}>
+              STUDENTS PLEASE SIGN UP TO THE PORTAL
+            </h5>
             <br />
             <hr
               style={{

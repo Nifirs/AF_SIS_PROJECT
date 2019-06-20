@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { register } from "./StudentFunctions";
 import "./App.css";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import logo2 from "../images/uu.png";
 
 class Register extends Component {
   constructor() {
@@ -42,25 +43,34 @@ class Register extends Component {
         style={{ backgroundColor: "#96979B", height: "900px" }}
       >
         <nav className="navbar navbar-dark bg-dark navbar-collapse justify-content-md-center">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/adminregister"} className="nav-link">Admin-Register</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/register"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Student-Register</Link>
-                                </li>
-                            </ul>
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to={"/instructorregister"} className="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;Instructor-Register</Link>
-                                </li>
-                            </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/adminregister"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                Admin-Register&nbsp;&nbsp;&nbsp;&nbsp;
+              </Link>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/register"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                &nbsp;&nbsp;&nbsp;&nbsp;Student-Register&nbsp;&nbsp;&nbsp;&nbsp;
+              </Link>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to={"/instructorregister"} className="nav-link">
+                <img src={logo2} className="logoMain" alt="logo" />
+                &nbsp;&nbsp;&nbsp;&nbsp;Instructor-Register
+              </Link>
+            </li>
+          </ul>
         </nav>
         <div className="col-md-6 mt-5 mx-auto">
           <form noValidate onSubmit={this.onSubmit}>
-          <br/>
+            <br />
             <h5 style={{ color: "white" }}>REGISTER STUDENTS TO THE PORTAL</h5>
             <br />
             <hr

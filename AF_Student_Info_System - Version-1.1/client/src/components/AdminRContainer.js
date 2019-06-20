@@ -15,7 +15,7 @@ class AdminRContainer extends Component {
         <br />
         <div className="container">
           <PTransition />
-          <div>
+          <div style={{ color: "white", width: "1130px" }}>
             <Link
               to=""
               className="nav-link"
@@ -25,58 +25,101 @@ class AdminRContainer extends Component {
             </Link>
           </div>
           <br />
-          <Link
-            to="/addBooking"
-            className="btn btn-primary mb-3"
-            style={{ width: "300px" }}
-          >
-            <i className="fas fa-plus-circle"> New Reservation</i>
-          </Link>
-          <br />
-          <Link
-            to="/ViewBooking"
-            className="btn btn-primary mb-3"
-            style={{ width: "300px" }}
-          >
-            <i class="fa fa-calculator" aria-hidden="true">
-              {" "}
-              View Reservation
-            </i>
-          </Link>
-          <br />
-          <Link
-            to="/ViewBill"
-            className="btn btn-primary mb-3"
-            style={{ width: "300px" }}
-          >
-            <i class="fa fa-university" aria-hidden="true">
-              {" "}
-              View Mobile Details
-            </i>
-          </Link>
-          <br />
-          <Link
-            to="/ViewCard"
-            className="btn btn-primary mb-3"
-            style={{ width: "300px" }}
-          >
-            <i class="fa fa-address-card" aria-hidden="true">
-              &nbsp; View Credit Card Details
-            </i>
-          </Link>
-          <br />
-          <hr
-            style={{ color: "#50B3C0", backgroundColor: "#51BFC6", height: 10 }}
-          />
-        </div>
-        <div className="nextEach">
-          <br />
+          <div className="nextEach" style={{ width: "1110px",padding:"5px",backgroundColor:"grey" }}>
+            <div>
+              <Link
+                to="/addCourse"
+                className="btn btn-danger mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i className="fas fa-plus-circle"> Add Course</i>
+              </Link>
+              <br />
+              <Link
+                to="/courses"
+                className="btn btn-danger mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i class="fa fa-calculator" aria-hidden="true">
+                  {" "}
+                  View Courses
+                </i>
+              </Link>
+              <br />
+              <Link
+                to="/viewCourse"
+                className="btn btn-danger mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i class="fa fa-address-card" aria-hidden="true">
+                  &nbsp; View Instructors-Courses
+                </i>
+              </Link>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+            <br />
+            <div>
+              <Link
+                to="/ViewBill"
+                className="btn btn-primary mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i class="fa fa-university" aria-hidden="true">
+                  {" "}
+                  View Students
+                </i>
+              </Link>
+
+              <br />
+              <Link
+                to="/ViewCard"
+                className="btn btn-primary mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i class="fa fa-address-card" aria-hidden="true">
+                  &nbsp; View Instructors
+                </i>
+              </Link>
+              <br />
+              <Link
+                to="/ViewCard"
+                className="btn btn-primary mb-3"
+                style={{ width: "500px",backgroundColor:"black" }}
+              >
+                <i class="fa fa-address-card" aria-hidden="true">
+                  &nbsp; View Administrators
+                </i>
+              </Link>
+            </div>
+          </div>
+          <br />
+        </div>
+        {/* <hr
+          style={{
+            backgroundColor: "#0B1C77",
+            height: 70,
+            width: "1347px",
+            marginBottom: "0px"
+          }}
+        /> */}
+        <h5 className="App" style={{ color: "yellow",backgroundColor:"#0B1C77",width:"1345px",height:"50px" }}>
+           2019 Enrollement is open now-Software Engineering-Electronic Engineering-Business Management
+            <br/>  
+          </h5>
+        <div className="nextEach">
           <CardContainer />
           <BtnGroup />
           <br />
-          <hr />
         </div>
+        {/* <hr
+          style={{
+            backgroundColor: "#0B1C77",
+            height: 30,
+            width: "1347px",
+            marginTop: "0px"
+          }}
+        /> */}
       </div>
     );
   }
