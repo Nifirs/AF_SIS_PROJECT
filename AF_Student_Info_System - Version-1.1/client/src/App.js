@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 import "./App.css";
 import logo1 from "./images/ee.jpg";
 
@@ -23,6 +23,12 @@ import InstructorLogin from "./components/InstructorLogin";
 import StudentRegister from "./components/StudentRegister";
 import InstructorRegister from "./components/InstructorRegister";
 import AdminRegister from "./components/AdminRegister";
+import ViewCourse from "./Component/viewNote";
+import EditCourse from "./Component/editNote";
+import AddCourse from "./Component/addNote";
+import DeleteCourse from "./Component/deleteNote";
+import viewStudent from "./Component/viewStudent";
+
 
 class App extends Component {
   render() {
@@ -67,6 +73,18 @@ class App extends Component {
           
          
             <Route exact path="/studentprofile" component={StudentProfile} />
+      
+              <Link to="/">Notices</Link>
+              <Link to="/create">Add Notices</Link>
+              <Link to="/view">View Student</Link>
+
+    
+              <Route path="/" exact component={ViewCourse}/>
+              <Route path="/edit/:id" component={EditCourse}/>
+              <Route path="/create" component={AddCourse}/>
+              <Route path="/delete/:id" component={DeleteCourse}/>
+              <Route path="/view" component={viewStudent}/>
+
           
             
           </body>
