@@ -4,9 +4,22 @@ var bodyParser = require("body-parser");
 var app = express();
 var mongoose = require("mongoose");
 var port = process.env.PORT || 5000;
+const path = require("path");
 
-app.use(bodyParser.json());
+const exphbs = require("express-handlebars");
+const nodemailer = require("nodemailer");
+
+//view engine setup
+app.engine("handlebars", exphbs());
+app.set("view Engine", "handlebars");
+
+//static folder
+app.use("/public", express.static(path.join(__dirname, "public")));
+
 app.use(cors());
+
+//body-parser as the middleware
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false
@@ -24,15 +37,18 @@ mongoose
 var Users = require("./routes/Users");
 var Instructors = require("./Routes/Instructors");
 var Students = require("./Routes/Students");
-var courseRoute = require("./Routes/courseRoute");//should import the route "file" name--->courseRoute not courseRoute1(this is exported module name)
+var courseRoute = require("./Routes/courseRoute"); //should import the route "file" name--->courseRoute not courseRoute1(this is exported module name)
+var emailRoute = require("./Routes/emailRoute");
 
 //Routing Files are imported
 app.use("/users", Users);
 app.use("/instructors", Instructors);
 app.use("/students", Students);
 app.use("/courses", courseRoute);
+app.use("/emailmessages", emailRoute);
 
 //Common---> var app=express()
 app.listen(port, () => {
   console.log("Server is running on port: " + port);
 });
+

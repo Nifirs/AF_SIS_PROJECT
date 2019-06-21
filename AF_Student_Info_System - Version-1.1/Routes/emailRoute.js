@@ -16,12 +16,13 @@ app.set("view Engine", "handlebars");
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 
-const courseRoute1 = express.Router();
-courseRoute1.use(cors());
-let instructor_course = require("../models/Course");
 
-courseRoute1.route("/").get(function(req, res) {
-  instructor_course.find(function(err, AF_PROJECT) {
+const messageRoute = express.Router();
+messageRoute.use(cors());
+let Message = require("../models/Message");
+
+messageRoute.route("/").get(function(req, res) {
+  Message.find(function(err, AF_PROJECT) {
     if (err) {
       console.log(err);
     } else {
@@ -30,15 +31,14 @@ courseRoute1.route("/").get(function(req, res) {
   });
 });
 
-courseRoute1.route("/:id").get(function(req, res) {
+messageRoute.route("/:id").get(function(req, res) {
   let id = req.params.id;
-  instructor_course.findById(id, function(err, resv) {
+  Message.findById(id, function(err, resv) {
     res.json(resv);
   });
 });
 
-courseRoute1.route("/add").post(function(req, res) {
-
+messageRoute.route("/add").post(function(req, res) {
   const email=req.body.instructor_email
   const output = 
   `<p>You have a new course request</p>
@@ -68,7 +68,7 @@ courseRoute1.route("/add").post(function(req, res) {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"TechGang-SIS Course Message" <techgang.afsis@gmail.com>', // sender address
+      from: '"SIS Course Issue Messages" <techgang.afsis@gmail.com>', // sender address
       to: email, // list of receivers
       subject: 'AF SIS-PROJECT', // Subject line
       text: 'You are assigned to a Course', // plain text body
@@ -87,19 +87,19 @@ courseRoute1.route("/add").post(function(req, res) {
   });
 
 
-  let res1 = new instructor_course(req.body);
+  let res1 = new Message(req.body);
   res1
     .save()
     .then(res1 => {
-      res.status(200).json({ res1: "Course added successfully" });
+      res.status(200).json({ res1: "message added successfully" });
     })
     .catch(err => {
       res, status(400).send("adding fail");
     });
 });
 
-courseRoute1.route("/update/:id").post(function(req, res) {
-  instructor_course.findById(req.params.id, function(err, res1) {
+messageRoute.route("/update/:id").post(function(req, res) {
+  Message.findById(req.params.id, function(err, res1) {
     if (!res1) res.status(404).send("data not found");
     else res1.course_name = req.body.course_name;
     res1.instructor_name = req.body.instructor_name;
@@ -109,21 +109,21 @@ courseRoute1.route("/update/:id").post(function(req, res) {
     res1
       .save()
       .then(res1 => {
-        res.json("Course updated");
+        res.json("message updated");
       })
       .catch(err => {
         res.status(400).send("Impossible to update");
       });
   });
 });
-courseRoute1.route("/delete/:id").get(function(req, res) {
-  instructor_course.findById(req.params.id, function(err, res1) {
+messageRoute.route("/delete/:id").get(function(req, res) {
+  Message.findById(req.params.id, function(err, res1) {
     if (!res1) res.status(404).send("data not found");
     else
       res1
         .delete()
         .then(res1 => {
-          res.json("Course deleted");
+          res.json("message deleted");
         })
         .catch(err => {
           res.status(400).send("Impossible to delete");
@@ -131,4 +131,4 @@ courseRoute1.route("/delete/:id").get(function(req, res) {
   });
 });
 
-module.exports = courseRoute1;
+module.exports = messageRoute;

@@ -4,7 +4,7 @@ import axios from "axios";
 
 import "../../App.css";
 
-class addCourse extends Component {
+class addMail extends Component {
   constructor(props) {
     super(props);
 
@@ -36,11 +36,11 @@ class addCourse extends Component {
     };
 
     axios
-      .post("http://localhost:5000/courses/add", newCourse)
+      .post("http://localhost:5000/emailmessages/add", newCourse)
       .then(res => console.log(res.data));
 
-    console.log("form submitted");
-    window.alert("Course assigned Successfully !");
+    console.log("message sent");
+    window.alert("Message sent Successfully !");
   }
 
   onChange(e) {
@@ -53,46 +53,22 @@ class addCourse extends Component {
       <div style={{ backgroundColor: "#909092", height: "1300px" }}>
         <div className="addProjectTask">
           <div className="container">
-            <br />
-            <div
-              className="nextEach"
-              style={{
-                backgroundColor: "black",
-                padding: "5px",
-                width: "1100px"
-              }}
-            >
-              <Link
-                to="/userHome"
-                className="btn btn-light"
-                style={{ width: "550px", height: "50px" }}
+            <div className="row">
+              <div
+                className="col-md-8 m-auto"
+                style={{
+                  backgroundColor: "grey",
+                  padding: "8px",
+                  width: "1100px"
+                }}
               >
-                <i class="fa fa-chevron-circle-left" aria-hidden="true">
-                  &nbsp;Back to Administrator Home
-                </i>
-              </Link>{" "}
-              &nbsp; &nbsp; &nbsp; &nbsp;
-              <div>
-                <Link
-                  to="/addMail"
-                  style={{ width: "550px" }}
-                  className="btn btn-info"
-                  onClick={this.addCourseClicked}
-                >
-                  <i className="fas fa-plus-circle">
-                    &nbsp;Send a Mail to Instructor
+               
+                <Link to="/userHome" className="btn btn-light">
+                  <i class="fa fa-chevron-circle-left" aria-hidden="true">
+                    &nbsp;Back to Administrator Home
                   </i>
                 </Link>
-              </div>
-            </div>
-            <br/><br/>
-            <div className="row">
-            
-              <div className="col-md-8 m-auto" style={{
-                backgroundColor: "grey",
-                padding: "8px",
-                width: "1100px"
-              }}>
+
                 <form onSubmit={this.onSubmit}>
                   {/* <hr
                     style={{
@@ -132,7 +108,7 @@ class addCourse extends Component {
                     }}
                   />
                   <h6 style={{ color: "white" }}>
-                    Newly-Available course Insertion
+                    Send-Mail to the Instructors regarding Course Issues
                   </h6>
                   <br />
                   <div className="form-group">
@@ -199,4 +175,4 @@ class addCourse extends Component {
   }
 }
 
-export default addCourse;
+export default addMail;

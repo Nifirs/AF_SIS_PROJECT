@@ -8,7 +8,9 @@ class updateCourse extends Component {
     this.state = {
       course_name: "",
       instructor_name: "",
-      instructor_email: ""
+      instructor_email: "",
+      message:""
+
     };
 
     this.onChange = this.onChange.bind(this);
@@ -21,7 +23,9 @@ class updateCourse extends Component {
         this.setState({
           course_name: response.data.course_name,
           instructor_name: response.data.instructor_name,
-          instructor_email: response.data.instructor_email
+          instructor_email: response.data.instructor_email,
+          message: response.data.message,
+
         });
       })
       .catch(function(error) {
@@ -33,7 +37,9 @@ class updateCourse extends Component {
     const updatedBill = {
       course_name: this.state.course_name,
       instructor_name: this.state.instructor_name,
-      instructor_email: this.state.instructor_email
+      instructor_email: this.state.instructor_email,
+      message: this.state.message
+
     };
     axios
       .post(
@@ -70,57 +76,102 @@ class updateCourse extends Component {
                 <br />
 
                 <form onSubmit={this.onSubmit}>
+                  {/* <hr
+                    style={{
+                      color: "#50B3C0",
+                      backgroundColor: "#31C4F7",
+                      height: 10
+                    }}
+                  /> */}
+                  <br />
                   <hr
                     style={{
                       color: "#50B3C0",
-                      backgroundColor: "#51BFC6",
-                      height: 10
+                      backgroundColor: "#48494f",
+                      height: 20
+                    }}
+                  />{" "}
+                  {/* <ul>
+                    <li>
+                      <i class="fas fa-plus-circle" /> TechGang Web Solutions
+                      SIS
+                    </li>
+                    <li>
+                      <i class="fa fa-road" /> 44, IdealSolutions,Colombo 03
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" /> (555) 555-5555
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope" /> IdealSolutions@teschgang.com
+                    </li>
+                  </ul> */}
+                  <hr
+                    style={{
+                      color: "#50B3C0",
+                      backgroundColor: "#48494f",
+                      height: 20
                     }}
                   />
-
+                  <h6 style={{ color: "white" }}>
+                    Send-Mail to the Instructors on assigned courses
+                  </h6>
+                  <br />
                   <div className="form-group">
                     <h6>Enter Course Name</h6>
-
                     <input
                       type="text"
                       className="form-control form-control-lg"
                       name="course_name"
-                      maxLength="10"
                       value={this.state.course_name}
-                      onChange={this.onChange}
                       placeholder="Course Name"
+                      onChange={this.onChange}
                     />
                   </div>
                   <div className="form-group">
                     <h6>Enter Instructor Name</h6>
-
                     <input
                       type="text"
                       className="form-control form-control-lg"
                       name="instructor_name"
                       value={this.state.instructor_name}
-                      onChange={this.onChange}
                       placeholder="Instructor Name"
+                      onChange={this.onChange}
                     />
                   </div>
                   <div className="form-group">
                     <h6>Enter Instructor E-mail</h6>
-
                     <input
                       type="text"
                       className="form-control form-control-lg"
+                      placeholder="Instructor E-mail"
                       name="instructor_email"
-                      maxLength="4"
                       value={this.state.instructor_email}
                       onChange={this.onChange}
-                      placeholder="Instructor E-mail"
                     />
+                  </div>
+                  <div className="form-group">
+                    <h6>Enter the Message</h6>
+                    <p class="full">
+                      <textarea
+                        name="message"
+                        value={this.state.message}
+                        rows="5"
+                        className="form-control"
+                        placeholder="Enter the message..."
+                        onChange={this.onChange}
+
+                      />
+                    </p>
                   </div>
                   <input
                     type="submit"
                     className="btn btn-info btn-block mt-4"
-                    value="UPDATE"
+                    value="Update Sent Mail"
                   />
+                  <i className="fa fa-envelope">
+                    &nbsp;Click here to send a Mail to the Instructor
+                  </i>
                 </form>
               </div>
             </div>

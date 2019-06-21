@@ -22,4 +22,4 @@ const UserSchema = new Schema({
   }
 });
 
-module.exports = Course = mongoose.model("courses", UserSchema);
+module.exports = Course = mongoose.model("messages", UserSchema);

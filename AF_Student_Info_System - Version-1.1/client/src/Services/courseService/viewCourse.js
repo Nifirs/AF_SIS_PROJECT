@@ -5,6 +5,8 @@ import AdminNavBar from "../../components/AdminNavBar";
 import jwt_decode from "jwt-decode";
 import Resv from "./Resv";
 
+
+
 class viewCourse extends Component {
   constructor(props) {
     super(props);
@@ -69,6 +71,7 @@ class viewCourse extends Component {
                 <th>Course Name</th>
                 <th>Instructor Name</th>
                 <th>Instructor E-mail</th>
+                <th>Sent Message</th>
 
                 <th>Edit</th>
                 <th>Delete</th>
@@ -77,6 +80,10 @@ class viewCourse extends Component {
             <tbody>{this.reservationList()}</tbody>
           </table>
         </div>
+
+
+
+
       </div>
     );
   }

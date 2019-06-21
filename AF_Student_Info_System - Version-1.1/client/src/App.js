@@ -30,6 +30,7 @@ import InstructorLogin from "./components/InstructorLogin";
 import StudentRegister from "./components/StudentRegister";
 import InstructorRegister from "./components/InstructorRegister";
 import AdminRegister from "./components/AdminRegister";
+import addMail from "./Services/mailService/addMail";
 
 class App extends Component {
   render() {
@@ -78,7 +79,6 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/studentlogin" component={StudentLogin} />
             <Route exact path="/instructorlogin" component={InstructorLogin} />
-
             <Route exact path="/profile" component={Profile} />
 
             <Route
@@ -92,6 +92,9 @@ class App extends Component {
             <Route exact path="/addCourse" component={addCourse} />
             <Route exact path="/viewCourse" component={viewCourse} />
             <Route exact path="/editCourse/:id" component={updateCourse} />
+            
+            <Route exact path="/addMail" component={addMail} />
+
 
             <Route path="/courses" exact component={ListCoursesComponent} />
             <Route path="/courses/:id" component={CourseComponent} />
