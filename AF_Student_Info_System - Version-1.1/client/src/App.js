@@ -17,6 +17,9 @@ import addCourse from "./Services/courseService/addCourse";
 import viewCourse from "./Services/courseService/viewCourse";
 import updateCourse from "./Services/courseService/updateCourse";
 
+import viewStudent from "./Services/studentService/viewStudent";
+import updateStudent from "./Services/studentService/updateStudent";
+
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 
@@ -93,6 +96,11 @@ class App extends Component {
             <Route exact path="/viewCourse" component={viewCourse} />
             <Route exact path="/editCourse/:id" component={updateCourse} />
             
+            <Route exact path="/viewStudent" component={viewStudent} />
+            <Route exact path="/editStudent/:id" component={updateStudent} />
+
+
+
             <Route exact path="/addMail" component={addMail} />
 
 
