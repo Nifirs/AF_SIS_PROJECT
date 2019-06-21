@@ -184,10 +184,10 @@ class addCourse extends Component {
                   <input
                     type="submit"
                     className="btn btn-info btn-block mt-4"
-                    value="Send Mail"
+                    value="INSERT"
                   />
                   <i className="fa fa-envelope">
-                    &nbsp;Click here to send a Mail to the Instructor
+                    &nbsp;After insertion this will notify the Instructor via Mail
                   </i>
                 </form>
               </div>

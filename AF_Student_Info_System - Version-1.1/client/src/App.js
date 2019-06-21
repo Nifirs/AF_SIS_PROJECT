@@ -34,6 +34,10 @@ import StudentRegister from "./components/StudentRegister";
 import InstructorRegister from "./components/InstructorRegister";
 import AdminRegister from "./components/AdminRegister";
 import addMail from "./Services/mailService/addMail";
+import updateInstructor from "./Services/instructorService/updateInstructor";
+import viewInstructor from "./Services/instructorService/viewInstructor";
+import viewAdministrator from "./Services/administratorService/viewAdministrator";
+import updateAdministrator from "./Services/administratorService/updateAdministrator";
 
 class App extends Component {
   render() {
@@ -99,7 +103,11 @@ class App extends Component {
             <Route exact path="/viewStudent" component={viewStudent} />
             <Route exact path="/editStudent/:id" component={updateStudent} />
 
+            <Route exact path="/viewInstructor" component={viewInstructor} />
+            <Route exact path="/editInstructor/:id" component={updateInstructor} />
 
+            <Route exact path="/viewAdministrator" component={viewAdministrator} />
+            <Route exact path="/editAdministrator/:id" component={updateAdministrator} />
 
             <Route exact path="/addMail" component={addMail} />
 

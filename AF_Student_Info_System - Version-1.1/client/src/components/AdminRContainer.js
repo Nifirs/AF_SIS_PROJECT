@@ -73,7 +73,7 @@ class AdminRContainer extends Component {
 
               <br />
               <Link
-                to="/ViewCard"
+                to="/viewInstructor"
                 className="btn btn-primary mb-3"
                 style={{ width: "500px",backgroundColor:"black" }}
               >
@@ -83,7 +83,7 @@ class AdminRContainer extends Component {
               </Link>
               <br />
               <Link
-                to="/ViewCard"
+                to="/viewAdministrator"
                 className="btn btn-primary mb-3"
                 style={{ width: "500px",backgroundColor:"black" }}
               >
@@ -95,14 +95,7 @@ class AdminRContainer extends Component {
           </div>
           <br />
         </div>
-        {/* <hr
-          style={{
-            backgroundColor: "#0B1C77",
-            height: 70,
-            width: "1347px",
-            marginBottom: "0px"
-          }}
-        /> */}
+       
         <h5 className="App" style={{ color: "yellow",backgroundColor:"#0B1C77",width:"1345px",height:"50px" }}>
            2019 Enrollement is open now-Software Engineering-Electronic Engineering-Business Management
             <br/>  
@@ -112,14 +105,7 @@ class AdminRContainer extends Component {
           <BtnGroup />
           <br />
         </div>
-        {/* <hr
-          style={{
-            backgroundColor: "#0B1C77",
-            height: 30,
-            width: "1347px",
-            marginTop: "0px"
-          }}
-        /> */}
+       
       </div>
     );
   }
