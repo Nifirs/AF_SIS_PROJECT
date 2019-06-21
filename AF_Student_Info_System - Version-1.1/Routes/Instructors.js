@@ -1,14 +1,28 @@
 const express = require("express");
-const instructors = express.Router();
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+const path = require("path");
+var app = express();
+
+const exphbs = require("express-handlebars");
+const nodemailer = require("nodemailer");
+
+require('dotenv').config();//gmail email and username security
+
+//view engine setup
+app.engine("handlebars", exphbs());
+app.set("view Engine", "handlebars");
+
+//static folder
+app.use("/public", express.static(path.join(__dirname, "public")));
+
+
+const instructors = express.Router();
 const User = require("../models/Instructor");
 instructors.use(cors());
-
 process.env.SECRET_KEY = "secret";
-
 instructors.post("/insregister", (req, res) => {
   const today = new Date();
   const userData = {
@@ -18,6 +32,58 @@ instructors.post("/insregister", (req, res) => {
     password: req.body.password,
     created: today
   };
+
+  const email=req.body.email
+  const output = 
+  `<p>Instructor-Registration</p>
+  <h3>Registered-Instructors</h3>
+  <ul>  
+    <li>First Name: ${req.body.first_name}</li>
+    <li>Last Name: ${req.body.last_name}</li>
+    <li>Your Email: ${req.body.email}</li>
+    <li>Your Password: ${req.body.password}</li>
+
+    <li>Message: You are registered now</li>
+    <li>Password and Email are given please check it out</li>
+
+  </ul>`
+  ;
+  var smtpTransport = require('nodemailer-smtp-transport');
+
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport(smtpTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+        user:"techgang.afsis@gmail.com" , // generated ethereal user
+        pass: "techgang@9596"  // generated ethereal password
+    },
+    tls:{
+      rejectUnauthorized:false
+    }
+  }));
+
+  // setup email data with unicode symbols
+  let mailOptions = {
+      from: '"TechGang-SIS Course Message" <techgang.afsis@gmail.com>', // sender address
+      to: email, // list of receivers
+      subject: 'AF SIS-PROJECT', // Subject line
+      text: 'You are assigned to a Course', // plain text body
+      html: output // html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+           console.log(error);
+      }
+     
+
+      res.render('contact', {msg:'Email has been sent'});
+  });
+
+
 
   User.findOne({
     email: req.body.email
