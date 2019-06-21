@@ -61,13 +61,13 @@ class AdminRContainer extends Component {
             <br />
             <div>
               <Link
-                to="/ViewBill"
+                to="/viewStudent"
                 className="btn btn-primary mb-3"
                 style={{ width: "500px",backgroundColor:"black" }}
               >
                 <i class="fa fa-university" aria-hidden="true">
                   {" "}
-                  View Students
+                  View registered Students
                 </i>
               </Link>
 
@@ -78,7 +78,7 @@ class AdminRContainer extends Component {
                 style={{ width: "500px",backgroundColor:"black" }}
               >
                 <i class="fa fa-address-card" aria-hidden="true">
-                  &nbsp; View Instructors
+                  &nbsp; View registered Instructors
                 </i>
               </Link>
               <br />
@@ -88,7 +88,7 @@ class AdminRContainer extends Component {
                 style={{ width: "500px",backgroundColor:"black" }}
               >
                 <i class="fa fa-address-card" aria-hidden="true">
-                  &nbsp; View Administrators
+                  &nbsp; View registered Administrators
                 </i>
               </Link>
             </div>

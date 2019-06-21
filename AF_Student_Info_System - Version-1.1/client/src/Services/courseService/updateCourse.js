@@ -91,7 +91,7 @@ class updateCourse extends Component {
                       height: 20
                     }}
                   />{" "}
-                  {/* <ul>
+                  <ul>
                     <li>
                       <i class="fas fa-plus-circle" /> TechGang Web Solutions
                       SIS
@@ -105,7 +105,7 @@ class updateCourse extends Component {
                     <li>
                       <i class="fa fa-envelope" /> IdealSolutions@teschgang.com
                     </li>
-                  </ul> */}
+                  </ul>
                   <hr
                     style={{
                       color: "#50B3C0",

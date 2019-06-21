@@ -32,8 +32,14 @@ class Register extends Component {
     };
 
     register(user).then(res => {
-      this.props.history.push(`/profile`);
-    });
+      this.props.history.push(`/register`);
+      this.setState({
+      first_name: "",
+      last_name:"",
+      email: "",
+      password:""
+      });
+        });
   }
 
   render() {

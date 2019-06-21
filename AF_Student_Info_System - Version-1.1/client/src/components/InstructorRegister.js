@@ -32,7 +32,13 @@ class InstructorRegister extends Component {
     };
 
     insregister(user).then(res => {
-      this.props.history.push(`/profile`);
+      this.props.history.push(`/instructorregister`);
+      this.setState({
+      first_name: "",
+      last_name:"",
+      email: "",
+      password:""
+      });
     });
   }
 
