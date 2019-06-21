@@ -32,7 +32,14 @@ class AdminRegister extends Component {
     };
 
     register(user).then(res => {
-      this.props.history.push(`/profile`);
+      this.props.history.push(`/adminregister`);
+      this.setState({
+      first_name: "",
+      last_name:"",
+      email: "",
+      password:""
+      });   
+    
     });
   }
 

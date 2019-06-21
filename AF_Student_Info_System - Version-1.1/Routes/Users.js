@@ -93,4 +93,59 @@ users.get("/profile", (req, res) => {
     });
 });
 
+//normal route starts here
+
+
+users.route("/").get(function(req, res) {
+  User.find(function(err, AF_PROJECT) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(AF_PROJECT);
+    }
+  });
+});
+
+users.route("/:id").get(function(req, res) {
+  let id = req.params.id;
+  User.findById(id, function(err, resv) {
+    res.json(resv);
+  });
+});
+
+
+users.route("/update/:id").post(function(req, res) {
+  User.findById(req.params.id, function(err, res1) {
+    if (!res1) res.status(404).send("data not found");
+    else res1.first_name = req.body.first_name;
+    res1.last_name = req.body.last_name;
+    res1.email = req.body.email;
+    res1.password = req.body.password;
+
+    res1
+      .save()
+      .then(res1 => {
+        res.json("Admin updated");
+      })
+      .catch(err => {
+        res.status(400).send("Impossible to update");
+      });
+  });
+});
+users.route("/delete/:id").get(function(req, res) {
+  User.findById(req.params.id, function(err, res1) {
+    if (!res1) res.status(404).send("data not found");
+    else
+      res1
+        .delete()
+        .then(res1 => {
+          res.json("Admin deleted");
+        })
+        .catch(err => {
+          res.status(400).send("Impossible to delete");
+        });
+  });
+});
+
+
 module.exports = users;

@@ -55,8 +55,9 @@ courseRoute1.route("/add").post(function(req, res) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport(smtpTransport({
-    service: 'gmail',
-
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
     auth: {
         user:"techgang.afsis@gmail.com" , // generated ethereal user
         pass: "techgang@9596"  // generated ethereal password
