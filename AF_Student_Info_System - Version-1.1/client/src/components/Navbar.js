@@ -148,12 +148,6 @@ class Navbar extends Component {
           id="navbar1"
         >
           <ul className="navbar-nav">
-            {/* <li className="nav-item">
-              <Link to="/" className="nav-link">
-                <img src={logo1} className="logoMain" alt="logo" />
-                
-              </Link>
-            </li> */}
             &nbsp;&nbsp;&nbsp;&nbsp;
             <li className="nav-item">
               <Link to="/" className="nav-link">
@@ -164,6 +158,7 @@ class Navbar extends Component {
             &nbsp;&nbsp;&nbsp;&nbsp;
           </ul>
 
+      
           {localStorage.usertoken ? userLink : loginRegLink}
           {localStorage.instructortoken ? instructorLink : ""}
           {localStorage.studenttoken ? studentLink : ""}

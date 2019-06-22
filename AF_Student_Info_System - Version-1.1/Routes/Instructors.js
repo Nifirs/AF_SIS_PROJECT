@@ -43,7 +43,7 @@ instructors.post("/insregister", (req, res) => {
     <li>Your Email: ${req.body.email}</li>
     <li>Your Password: ${req.body.password}</li>
 
-    <li>Message: You are registered now</li>
+    <li>Message: You are registered as an Instructor now</li>
     <li>Password and Email are given please check it out</li>
 
   </ul>`
@@ -69,7 +69,7 @@ instructors.post("/insregister", (req, res) => {
       from: '"TechGang-SIS Course Message" <techgang.afsis@gmail.com>', // sender address
       to: email, // list of receivers
       subject: 'AF SIS-PROJECT', // Subject line
-      text: 'You are assigned to a Course', // plain text body
+      text: 'You are registered', // plain text body
       html: output // html body
   };
 

@@ -38,6 +38,17 @@ import updateInstructor from "./Services/instructorService/updateInstructor";
 import viewInstructor from "./Services/instructorService/viewInstructor";
 import viewAdministrator from "./Services/administratorService/viewAdministrator";
 import updateAdministrator from "./Services/administratorService/updateAdministrator";
+import viewNote from "./Services/studentMarkService/viewNote";
+import editNote from "./Services/studentMarkService/editNote";
+import addNote from "./Services/studentMarkService/addNote";
+import deleteNote from "./Services/studentMarkService/deleteNote";
+import addMarks from "./Services/studentMarkService/addMarks";
+import viewMarks from "./Services/studentMarkService/viewMarks";
+import editMarks from "./Services/studentMarkService/editMarks";
+import deleteMarks from "./Services/studentMarkService/deleteMarks";
+import marksStudent from "./Services/studentMarkService/marksStudent";
+import studentViewNotes from "./Services/studentMarkService/studentViewNotes";
+import studentCourseList from "./Services/service/studentCourseList";
 
 class App extends Component {
   render() {
@@ -99,21 +110,53 @@ class App extends Component {
             <Route exact path="/addCourse" component={addCourse} />
             <Route exact path="/viewCourse" component={viewCourse} />
             <Route exact path="/editCourse/:id" component={updateCourse} />
-            
+
             <Route exact path="/viewStudent" component={viewStudent} />
             <Route exact path="/editStudent/:id" component={updateStudent} />
 
             <Route exact path="/viewInstructor" component={viewInstructor} />
-            <Route exact path="/editInstructor/:id" component={updateInstructor} />
+            <Route
+              exact
+              path="/editInstructor/:id"
+              component={updateInstructor}
+            />
 
-            <Route exact path="/viewAdministrator" component={viewAdministrator} />
-            <Route exact path="/editAdministrator/:id" component={updateAdministrator} />
+            <Route
+              exact
+              path="/viewAdministrator"
+              component={viewAdministrator}
+            />
+            <Route
+              exact
+              path="/editAdministrator/:id"
+              component={updateAdministrator}
+            />
 
             <Route exact path="/addMail" component={addMail} />
 
-
             <Route path="/courses" exact component={ListCoursesComponent} />
             <Route path="/courses/:id" component={CourseComponent} />
+            <Route path="/studentCourseList" exact component={studentCourseList} />
+
+
+
+          {/* Tharaka's Routes starts here */}
+
+              <Route path="/viewNotice" exact component={viewNote}/>
+              <Route path="/editnote/:id" component={editNote}/>
+              <Route path="/addNotice" component={addNote}/>
+              <Route path="/deletenote/:id" component={deleteNote}/>
+              <Route path="/viewStudentsTharaka" component={studentViewNotes}/>
+
+
+              <Route path="/addMarks" component={addMarks}/>
+              <Route path="/viewMarks" component={viewMarks}/>
+              <Route path="/editmarks/:id" component={editMarks}/>
+              <Route path="/deletemarks/:id" component={deleteMarks}/>
+              <Route path="/viewStudentMarks" component={marksStudent}/>
+          
+          {/* Tharaka's Routes ends here */}
+
           </body>
         </div>
       </Router>
