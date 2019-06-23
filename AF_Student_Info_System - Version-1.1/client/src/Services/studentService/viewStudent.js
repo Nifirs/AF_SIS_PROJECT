@@ -72,7 +72,6 @@ class viewStudent extends Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Student E-mail</th>
-                <th>Password</th>
 
                 <th>Edit</th>
                 <th>Delete</th>

@@ -21,7 +21,6 @@ class Resv extends Component {
         <td>{this.props.resv.first_name}</td>
         <td>{this.props.resv.last_name}</td>
         <td>{this.props.resv.email}</td>
-        <td>{this.props.resv.password}</td>
 
         <td>
           <i class="fa fa-window-restore" aria-hidden="true">
