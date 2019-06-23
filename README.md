@@ -41,7 +41,7 @@ Deployment:
 
     1.npm install
 
-    11.node server.js
+    11.nodemon server.js ----->Backend Server will be run on Port:5001
 
 6.All the dependencies in the project folder, pakage.json will be downloaded and the Express server, Mongo DB server will be started
 
