@@ -31,6 +31,8 @@ class Profile extends Component {
           <i className="fa fa-user-circle" aria-hidden="true">
             &nbsp;&nbsp;<b>Hello {this.state.first_name}</b>{" "}
           </i>
+          <i class="fa fa-spinner fa-pulse fa-lg fa-fw"></i>
+          <span class="sr-only">Loading...</span>
         </Link>
         <div className="jumbotron mt-1" style={{width:"600px",height:"700px"}}>
           <div className="col-sm-8 mx-auto">

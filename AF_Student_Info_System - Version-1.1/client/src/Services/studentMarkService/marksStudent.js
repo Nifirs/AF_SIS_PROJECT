@@ -18,7 +18,7 @@ export default class marksStudent extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/notifys")
+      .get("http://localhost:5001/notifys")
       .then(response => {
         this.setState({ marks: response.data });
       })

@@ -24,7 +24,7 @@ class viewAdministrator extends Component {
     });
 
     axios
-      .get("http://localhost:5000/users/")
+      .get("http://localhost:5001/users/")
       .then(response => {
         this.setState({ r: response.data });
       })
@@ -35,7 +35,7 @@ class viewAdministrator extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/users/")
+      .get("http://localhost:5001/users/")
       .then(response => {
         this.setState({ r: response.data });
       })

@@ -23,6 +23,7 @@ const instructors = express.Router();
 const User = require("../models/Instructor");
 instructors.use(cors());
 process.env.SECRET_KEY = "secret";
+
 instructors.post("/insregister", (req, res) => {
   const today = new Date();
   const userData = {

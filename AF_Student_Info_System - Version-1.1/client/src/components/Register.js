@@ -78,7 +78,7 @@ class Register extends Component {
           <form noValidate onSubmit={this.onSubmit}>
             <br />
             <h5 style={{ color: "white" }}>REGISTER STUDENTS TO THE PORTAL</h5>
-            <br />
+            
             <hr
               style={{
                 color: "purple",

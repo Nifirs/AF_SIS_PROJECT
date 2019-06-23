@@ -30,14 +30,7 @@ class AdminRContainer extends Component {
             style={{ width: "1110px", padding: "5px", backgroundColor: "grey" }}
           >
             <div>
-              <Link
-                to="/addCourse"
-                className="btn btn-danger mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
-              >
-                <i className="fas fa-plus-circle"> Add Course</i>
-              </Link>
-              <br />
+             
               <Link
                 to="/courses"
                 className="btn btn-danger mb-3"
@@ -49,6 +42,13 @@ class AdminRContainer extends Component {
                 </i>
               </Link>
               <br />
+              <Link
+                to="/addCourse"
+                className="btn btn-danger mb-3"
+                style={{ width: "500px", backgroundColor: "black" }}
+              >
+                <i className="fas fa-plus-circle"> Assign Course to Instructors</i>
+              </Link>
               <Link
                 to="/viewCourse"
                 className="btn btn-danger mb-3"

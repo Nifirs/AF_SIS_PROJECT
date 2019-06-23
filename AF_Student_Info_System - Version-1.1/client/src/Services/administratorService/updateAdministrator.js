@@ -17,7 +17,7 @@ class updateAdministrator extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:5000/users/" + this.props.match.params.id)
+      .get("http://localhost:5001/users/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           first_name: response.data.first_name,
@@ -40,7 +40,7 @@ class updateAdministrator extends Component {
     };
     axios
       .post(
-        "http://localhost:5000/users/update/" + this.props.match.params.id,
+        "http://localhost:5001/users/update/" + this.props.match.params.id,
         updatedStudent
       )
       .then(res => console.log.apply(res.data));

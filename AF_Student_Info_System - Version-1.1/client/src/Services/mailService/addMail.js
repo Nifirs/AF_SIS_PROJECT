@@ -36,7 +36,7 @@ class addMail extends Component {
     };
 
     axios
-      .post("http://localhost:5000/emailmessages/add", newCourse)
+      .post("http://localhost:5001/emailmessages/add", newCourse)
       .then(res => console.log(res.data));
 
     console.log("message sent");

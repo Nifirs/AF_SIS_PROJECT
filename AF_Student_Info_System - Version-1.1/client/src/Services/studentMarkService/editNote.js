@@ -21,7 +21,7 @@ export default class editNote extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/notifys/all/" + this.props.match.params.id)
+      .get("http://localhost:5001/notifys/all/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           NoteDate: response.data.NoteDate,
@@ -63,7 +63,7 @@ export default class editNote extends React.Component {
     };
     axios
       .post(
-        "http://localhost:5000/notifys/update/" + this.props.match.params.id,
+        "http://localhost:5001/notifys/update/" + this.props.match.params.id,
         obj
       )
       .then(res => console.log(res.data));

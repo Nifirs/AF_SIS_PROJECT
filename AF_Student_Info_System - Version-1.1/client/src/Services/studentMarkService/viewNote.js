@@ -33,7 +33,7 @@ export default class viewNote extends React.Component {
     });
 
     axios
-      .get("http://localhost:5000/notifys/all")
+      .get("http://localhost:5001/notifys/all")
       .then(response => {
         this.setState({ notes: response.data });
       })
@@ -44,7 +44,7 @@ export default class viewNote extends React.Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/notifys/all")
+      .get("http://localhost:5001/notifys/all")
       .then(response => {
         this.setState({ notes: response.data });
       })

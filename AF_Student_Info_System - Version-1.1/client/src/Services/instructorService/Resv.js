@@ -10,7 +10,7 @@ class Resv extends Component {
 
   clickDelete() {
     axios
-      .get("http://localhost:5000/instructors/delete/" + this.props.resv._id)
+      .get("http://localhost:5001/instructors/delete/" + this.props.resv._id)
       .then(window.alert("Instructor Deleted"))
       .catch(err => console.log(err));
   }

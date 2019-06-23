@@ -12,7 +12,7 @@ export default class deleteNote extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/notifys/all/" + this.props.match.params.id)
+      .get("http://localhost:5001/notifys/all/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           id: response.data._id
@@ -33,7 +33,7 @@ export default class deleteNote extends React.Component {
     event.preventDefault();
 
     axios
-      .delete(`http://localhost:5000/notifys/delete/${this.state.id}`)
+      .delete(`http://localhost:5001/notifys/delete/${this.state.id}`)
       .then(res => {
         console.log(res);
         console.log(res.data);

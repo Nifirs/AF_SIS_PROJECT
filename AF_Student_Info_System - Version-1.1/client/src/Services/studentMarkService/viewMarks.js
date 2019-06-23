@@ -23,7 +23,7 @@ export default class viewMarks extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/notifys/")
+      .get("http://localhost:5001/notifys/")
       .then(response => {
         this.setState({ marks: response.data });
       })
@@ -34,7 +34,7 @@ export default class viewMarks extends React.Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/notifys/")
+      .get("http://localhost:5001/notifys/")
       .then(response => {
         this.setState({ marks: response.data });
       })

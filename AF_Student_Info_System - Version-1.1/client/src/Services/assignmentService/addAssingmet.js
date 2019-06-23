@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
-export default class addMarks extends React.Component {
+export default class addAssingmet extends React.Component {
   constructor(props) {
     super(props);
 
     this.changeSubject = this.changeSubject.bind(this);
     this.changeRegNo = this.changeRegNo.bind(this);
-    this.changeMarks = this.changeMarks.bind(this);
+    this.changeLink = this.changeLink.bind(this);
 
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       Subject: "",
       RegNo: "",
-      Marks: "",
+      Link: "",
       completed: false
     };
   }
@@ -30,9 +30,9 @@ export default class addMarks extends React.Component {
       RegNo: e.target.value
     });
   }
-  changeMarks(e) {
+  changeLink(e) {
     this.setState({
-      Marks: e.target.value
+      Link: e.target.value
     });
   }
 
@@ -42,39 +42,45 @@ export default class addMarks extends React.Component {
     console.log(`Form submitted:`);
     console.log(`Note Date :${this.state.Subject}`);
     console.log(`Note Sub :${this.state.RegNo}`);
-    console.log(`Note :${this.state.Marks}`);
+    console.log(`Note :${this.state.Link}`);
     console.log(`Course Fee :${this.state.completed}`);
 
-    const newNote = {
+    const newAsin = {
       Subject: this.state.Subject,
-      RegNo: this.state.RegNo,
-      Marks: this.state.Marks,
+      regNo: this.state.RegNo,
+      Link: this.state.Link,
       completed: this.state.completed
     };
     axios
-      .post("http://localhost:5001/notifys/mAdd", newNote)
+      .post("http://localhost:50001/notifys/aAdd", newAsin)
       .then(res => console.log(res.data));
 
     this.setState({
       Subject: "",
       RegNo: "",
-      Marks: "",
+      Link: "",
       completed: false
     });
   }
 
   render() {
     return (
-      <div style={{ background: "grey" }}>
+      <div align="center">
+        <br />
+
         <div
           style={{
-            backgroundImage:""
-            
+            align: "center",
+            width: "500px",
+            backgroundColor: "grey",
+            padding: "5px",
+            height: "650px"
           }}
         >
           <pre>
             {" "}
-            <h2 style={{ color: "white" }}>Add Marks</h2>
+            <h2 style={{ color: "white" }}>Submit Assignment</h2>
+            <h6 style={{ color: "white" }}>Please upload your drive link</h6>
             <form onSubmit={this.onSubmit}>
               <div>
                 <div className="form-group" align="left">
@@ -100,12 +106,12 @@ export default class addMarks extends React.Component {
                   <br />
                 </div>
                 <div className="form-group" align="left">
-                  <label style={{ color: "white" }}>Marks </label>
+                  <label style={{ color: "white" }}>Drive Link </label>
                   <input
                     type="text"
                     className="form-control"
-                    value={this.state.Marks}
-                    onChange={this.changeMarks}
+                    value={this.state.Link}
+                    onChange={this.changeLink}
                     required
                   />
                   <br />
@@ -113,7 +119,7 @@ export default class addMarks extends React.Component {
                 <div>
                   <input
                     type="submit"
-                    value="Add Marks"
+                    value="Submit"
                     className="btn btn-primary"
                   />
                 </div>

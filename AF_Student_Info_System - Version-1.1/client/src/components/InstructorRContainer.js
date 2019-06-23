@@ -25,23 +25,24 @@ class InstructorRContainer extends Component {
           </div>
           <br />
 
+          <a
+            style={{ width: "1130px", backgroundColor: "black" }}
+            className="btn btn-danger mb-3"
+            href="http://localhost:3001/"
+          >
+            <i className="fa fa-check-circle">&nbsp;Online Exam Portal</i>
+          </a>
+
+          <br />
           <div
             className="nextEach"
-            style={{ width: "1110px", padding: "5px", backgroundColor: "grey" }}
+            style={{ width: "1130px", padding: "5px", backgroundColor: "grey" }}
           >
             <div>
               <Link
-                to="/viewNotice"
-                className="btn btn-danger mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
-              >
-                <i className="fa fa-calculator"> View Notices</i>
-              </Link>
-              <br />
-              <Link
                 to="/addNotice"
                 className="btn btn-danger mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
+                style={{ width: "360px", backgroundColor: "black" }}
               >
                 <i class="fas fa-plus-circle" aria-hidden="true">
                   {" "}
@@ -50,22 +51,31 @@ class InstructorRContainer extends Component {
               </Link>
               <br />
               <Link
+                to="/viewNotice"
+                className="btn btn-danger mb-3"
+                style={{ width: "360px", backgroundColor: "black" }}
+              >
+                <i className="fa fa-calculator"> View Notices</i>
+              </Link>
+              <br />
+
+              <Link
                 to="/viewStudentsTharaka"
                 className="btn btn-danger mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
+                style={{ width: "360px", backgroundColor: "black" }}
               >
                 <i class="fa fa-address-card" aria-hidden="true">
-                  &nbsp;View Students
+                  &nbsp;  Notice View of Students
                 </i>
               </Link>
             </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             <br />
             <div>
               <Link
                 to="/addMarks"
                 className="btn btn-primary mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
+                style={{ width: "360px", backgroundColor: "black" }}
               >
                 <i class="fas fa-plus-circle" aria-hidden="true">
                   {" "}
@@ -77,9 +87,9 @@ class InstructorRContainer extends Component {
               <Link
                 to="/viewMarks"
                 className="btn btn-primary mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
+                style={{ width: "360px", backgroundColor: "black" }}
               >
-                <i class="fa fa-address-card" aria-hidden="true">
+                <i class="fa fa-calculator" aria-hidden="true">
                   &nbsp; View Marks
                 </i>
               </Link>
@@ -87,10 +97,49 @@ class InstructorRContainer extends Component {
               <Link
                 to="/viewStudentMarks"
                 className="btn btn-primary mb-3"
-                style={{ width: "500px", backgroundColor: "black" }}
+                style={{ width: "360px", backgroundColor: "black" }}
               >
                 <i class="fa fa-address-card" aria-hidden="true">
-                  &nbsp; View Student Marks
+                  &nbsp;Marks View of Students 
+                </i>
+              </Link>
+            </div>{" "}
+            &nbsp;&nbsp;&nbsp;
+            <div>
+              <Link
+                to="/aAdd"
+                className="btn btn-danger mb-3"
+                style={{
+                  width: "360px",
+                  backgroundColor: "black"
+                }}
+              >
+                <i className="fas fa-plus-circle">
+                  &nbsp;&nbsp;&nbsp; Add Assignment 
+                </i>
+              </Link>
+              <Link
+                to="/viewA"
+                className="btn btn-danger mb-3"
+                style={{
+                  width: "360px",
+                  backgroundColor: "black"
+                }}
+              >
+                <i className="fa fa-calculator">
+                  &nbsp;&nbsp;&nbsp;View Assignment 
+                </i>
+              </Link>
+              <Link
+                to="/viewNotice"
+                className="btn btn-danger mb-3"
+                style={{
+                  width: "360px",
+                  backgroundColor: "black"
+                }}
+              >
+                <i className="fa fa-address-card">
+                  &nbsp;&nbsp;&nbsp; Assignment View of Students
                 </i>
               </Link>
             </div>
@@ -108,11 +157,8 @@ class InstructorRContainer extends Component {
         >
           2019 Enrollement is open now-Software Engineering-Electronic
           Engineering-Business Management
-          
         </h5>
         <div className="nextEach">
-          
-
           <CardContainer />
           <BtnGroup />
           <br />

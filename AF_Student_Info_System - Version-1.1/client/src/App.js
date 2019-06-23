@@ -49,6 +49,9 @@ import deleteMarks from "./Services/studentMarkService/deleteMarks";
 import marksStudent from "./Services/studentMarkService/marksStudent";
 import studentViewNotes from "./Services/studentMarkService/studentViewNotes";
 import studentCourseList from "./Services/service/studentCourseList";
+import addAssingmet from "./Services/assignmentService/addAssingmet";
+import viewAssingmemt from "./Services/assignmentService/viewAssingmemt";
+import deleteAssingmemt from "./Services/assignmentService/deleteAssingmemt";
 
 class App extends Component {
   render() {
@@ -154,6 +157,12 @@ class App extends Component {
               <Route path="/editmarks/:id" component={editMarks}/>
               <Route path="/deletemarks/:id" component={deleteMarks}/>
               <Route path="/viewStudentMarks" component={marksStudent}/>
+
+              <Route path="/aAdd" component={addAssingmet}/>
+              <Route path="/viewA" component={viewAssingmemt}/>
+              <Route path="/deleteA/:id" component={deleteAssingmemt}/>
+
+
           
           {/* Tharaka's Routes ends here */}
 

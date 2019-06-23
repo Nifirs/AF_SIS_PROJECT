@@ -71,7 +71,7 @@ class CourseComponent extends Component {
 
         return (
             <div>
-                <h3>Course</h3>
+                <h3 className="App1">Course</h3>
                 <div className="container">
                     <Formik
                         initialValues={{ id, description }}

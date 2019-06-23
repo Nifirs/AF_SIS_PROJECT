@@ -24,7 +24,7 @@ class viewStudent extends Component {
     });
 
     axios
-      .get("http://localhost:5000/students/")
+      .get("http://localhost:5001/students/")
       .then(response => {
         this.setState({ r: response.data });
       })
@@ -35,7 +35,7 @@ class viewStudent extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/students/")
+      .get("http://localhost:5001/students/")
       .then(response => {
         this.setState({ r: response.data });
       })

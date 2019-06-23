@@ -52,7 +52,7 @@ export default class addNote extends React.Component {
       completed: this.state.completed
     };
     axios
-      .post("http://localhost:5000/notifys/add", newNote)
+      .post("http://localhost:5001/notifys/add", newNote)
       .then(res => console.log(res.data));
 
     this.setState({

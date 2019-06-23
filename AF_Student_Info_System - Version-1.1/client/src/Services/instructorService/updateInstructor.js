@@ -17,7 +17,7 @@ class updateInstructor extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:5000/instructors/" + this.props.match.params.id)
+      .get("http://localhost:5001/instructors/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           first_name: response.data.first_name,
@@ -40,7 +40,7 @@ class updateInstructor extends Component {
     };
     axios
       .post(
-        "http://localhost:5000/instructors/update/" + this.props.match.params.id,
+        "http://localhost:5001/instructors/update/" + this.props.match.params.id,
         updatedInstructor
       )
       .then(res => console.log.apply(res.data));

@@ -21,7 +21,7 @@ export default class editMarks extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/notifys/" + this.props.match.params.id)
+      .get("http://localhost:5001/notifys/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           Subject: response.data.Subject,
@@ -63,7 +63,7 @@ export default class editMarks extends React.Component {
     };
     axios
       .post(
-        "http://localhost:5000/notifys/mUpdate/" + this.props.match.params.id,
+        "http://localhost:5001/notifys/mUpdate/" + this.props.match.params.id,
         newMark
       )
       .then(res => console.log(res.data));
@@ -114,6 +114,7 @@ export default class editMarks extends React.Component {
                 className="btn btn-primary"
                 value="Update Course"
               />
+              
             </div>
           </div>
         </form>
