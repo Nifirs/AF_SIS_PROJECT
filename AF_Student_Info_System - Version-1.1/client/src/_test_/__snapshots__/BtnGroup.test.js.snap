@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My snapshot test for buttons testing app button 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#48494F",
+      "width": "295px",
+    }
+  }
+>
+  <nav
+    className="navbar navbar-expand navbar-dark bg-primary"
+  >
+    <span
+      className="navbar-brand"
+    >
+      Important Links
+    </span>
+  </nav>
+  <nav
+    className="navbar navbar-expand navbar-light bg-light"
+  >
+    <a
+      className="navbar-brand"
+      href="http://www.moe.gov.lk/"
+    >
+      Ministry of Education
+    </a>
+  </nav>
+  <nav
+    className="navbar navbar-expand navbar-light bg-info"
+  >
+    <a
+      className="navbar-brand"
+      href="http://www.transport.gov.lk"
+    >
+      Ministry of Transport
+    </a>
+  </nav>
+  <nav
+    className="navbar navbar-expand navbar-light bg-danger"
+  >
+    <a
+      className="navbar-brand"
+      href="http://www.srilanka.travel"
+    >
+      Tourist Board
+    </a>
+  </nav>
+  <nav
+    className="navbar navbar-expand navbar-dark bg-secondary"
+  >
+    <a
+      className="navbar-brand"
+      href="http://www.srilankan.lk"
+    >
+      SL Airlines
+    </a>
+  </nav>
+  <br />
+  <div
+    className="btn-group-vertical"
+    role="group"
+    style={
+      Object {
+        "height": "450px",
+        "marginLeft": "10px",
+      }
+    }
+  >
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      ABOUT
+    </button>
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      CONTACT
+    </button>
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      FAQ
+    </button>
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      POLICIES
+    </button>
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      NOTICES
+    </button>
+    <button
+      className="btn btn-primary btn-block mt-4 btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      SERVICES
+    </button>
+  </div>
+</div>
+`;
